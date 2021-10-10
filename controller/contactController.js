@@ -305,7 +305,7 @@ const searchContact = async (req, res) => {
     // try {
     const searchDate = new Date(req.body.addDate);
     query["addDate"] = { $lt: searchDate };
-    searchDate.setHours(35, 0, 0, 0);
+    searchDate.setHours(24, 0, 0, 0);
     console.log(searchDate.getTime());
     // var matchContacts = await Contact.find({ownerAccount: req.user._id, addDate: {$lt: searchDate.getTime()}})
     // res.json(matchContacts)
